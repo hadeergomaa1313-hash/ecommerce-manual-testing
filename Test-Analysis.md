@@ -1,22 +1,16 @@
-# Test Analysis – nopCommerce
+# Test Analysis – Registration
 
-## 1. Feature: User Registration
+**Project Name:** nopCommerce Demo Website  
+**Module:** User Registration  
+**Test Type:** Manual Testing  
+**Test Environment:** https://demo.nopcommerce.com/
 
-### Objective
-To analyze the user registration functionality and identify the conditions that need to be tested.
-
-### Test Basis
-The registration form and its available fields on the nopCommerce demo website.
-
-### Test Conditions
-
-| ID | Test Condition | Expected Behavior |
-|---|---|---|
-| REG-TCND-01 | Register with valid required information | The account should be created successfully if all requirements are met. |
-| REG-TCND-02 | Submit the form with required fields empty | The website should display appropriate validation messages. |
-| REG-TCND-03 | Register using an email address that is already registered | The website should prevent duplicate registration and display an appropriate message. |
-| REG-TCND-04 | Enter an invalid email format | The website should display an email validation message. |
-| REG-TCND-05 | Enter mismatching password and confirmation password | The website should display an appropriate validation message. |
-
-### Notes
-These test conditions are initial analysis items. They should be reviewed against the actual registration form and observed website behavior before test case design.
+| ID | Test Scenario | Test Cases | Test Data | Pre-condition | Test Steps | Expected Result | Actual Result | Status |
+|---|---|---|---|---|---|---|---|---|
+| REG-001 | Verify registration with valid data | Verify that a new user can create an account using valid information. | First Name: Hadeer; Last Name: Gomaa; Email: unique valid email; Password: Test@12345; Confirm Password: Test@12345 | The user is on the Registration page and the email has not been registered before. | 1. Open the website. 2. Click Register. 3. Enter valid registration details. 4. Click Register. | The account should be created successfully, and a registration confirmation message should appear. | Not Run | Not Run |
+| REG-002 | Verify registration with empty required fields | Verify that the user cannot register without entering required information. | Leave all required fields empty. | The user is on the Registration page. | 1. Open the Registration page. 2. Leave the required fields empty. 3. Click Register. | Validation messages should appear for the required fields, and the account should not be created. | Not Run | Not Run |
+| REG-003 | Verify registration with an already registered email | Verify that the user cannot register with an email that already exists. | Email: an existing registered email; other fields: valid data. | An account already exists with the test email. | 1. Open the Registration page. 2. Enter valid details using the existing email. 3. Click Register. | The system should display an appropriate error message, and a duplicate account should not be created. | Not Run | Not Run |
+| REG-004 | Verify registration with an invalid email format | Verify that the system rejects an incorrectly formatted email address. | Email: `hadeer@invalid`; other fields: valid data. | The user is on the Registration page. | 1. Enter the registration details. 2. Enter an invalid email address. 3. Click Register. | The system should display an email validation message and prevent registration. | Not Run | Not Run |
+| REG-005 | Verify registration with mismatched passwords | Verify that the user cannot register when the password and confirmation password do not match. | Password: `Test@12345`; Confirm Password: `Test@54321`; other fields: valid data. | The user is on the Registration page. | 1. Enter valid personal information. 2. Enter a password. 3. Enter a different confirmation password. 4. Click Register. | The system should display a password mismatch message and prevent registration. | Not Run | Not Run |
+| REG-006 | Verify registration with a password below the minimum length | Verify that the system rejects a password that does not meet the minimum length requirement. | Password: `Ab1`; Confirm Password: `Ab1`; other fields: valid data. | The user is on the Registration page. | 1. Enter valid personal information. 2. Enter a short password. 3. Confirm the password. 4. Click Register. | The system should display a password validation message and prevent registration if the password is below the configured minimum length. | Not Run | Not Run |
+| REG-007 | Verify password confirmation is required | Verify that the user cannot register without confirming the password. | Password: `Test@12345`; Confirm Password: empty; other fields: valid data. | The user is on the Registration page. | 1. Enter valid personal information. 2. Enter a password. 3. Leave Confirm Password empty. 4. Click Register. | The system should display an appropriate validation message and prevent registration. | Not Run | Not Run |
