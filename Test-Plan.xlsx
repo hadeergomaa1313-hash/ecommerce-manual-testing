@@ -1,0 +1,25 @@
+ID	Task Name	Task Scope	Duration (Days)	Start	Finish	Predecessors	Work (Hours)	Resource Name
+1	Test Preparation Review	Review the website and available requirements	0.5	13-Oct-2026	13-Oct-2026	None	3	QA Tester
+2	Test Scope Definition	Define in-scope and out-of-scope features	0.5	13-Oct-2026	13-Oct-2026	1	3	QA Tester
+3	Test Planning	Define test approach, objectives, risks, and deliverables	0.5	14-Oct-2026	14-Oct-2026	2	3	QA Tester
+4	Risk Assessment	Identify high-risk features and prioritize testing	0.5	14-Oct-2026	14-Oct-2026	2	3	QA Tester
+5	Test Environment Preparation	Prepare browser, website access, and test documents	0.5	15-Oct-2026	15-Oct-2026	3	3	QA Tester
+6	Test Analysis	Identify test conditions for the in-scope features	1	15-Oct-2026	15-Oct-2026	3,4,5	6	QA Tester
+7	Create Registration Test Cases	Prepare positive and negative registration scenarios	1	18-Oct-2026	18-Oct-2026	6	6	QA Tester
+8	Create Login Test Cases	Prepare valid and invalid login scenarios	0.5	19-Oct-2026	19-Oct-2026	7	3	QA Tester
+9	Create Product Search Test Cases	Prepare product search and results scenarios	0.5	19-Oct-2026	19-Oct-2026	7	3	QA Tester
+10	Create Product Details Test Cases	Prepare product information and navigation scenarios	0.5	20-Oct-2026	20-Oct-2026	9	3	QA Tester
+11	Create Shopping Cart Test Cases	Prepare add, remove, and quantity update scenarios	1	20-Oct-2026	20-Oct-2026	10	6	QA Tester
+12	Create Checkout Test Cases	Prepare checkout workflow scenarios	1	21-Oct-2026	21-Oct-2026	11	6	QA Tester
+13	Test Case Review	Review test cases for clarity, coverage, and expected results	0.5	22-Oct-2026	22-Oct-2026	8,12	3	QA Tester
+14	Test Data Preparation	Prepare accounts and valid and invalid input data	0.5	22-Oct-2026	22-Oct-2026	13	3	QA Tester
+15	Test Execution - Registration and Login	Execute test cases and record results	1	25-Oct-2026	25-Oct-2026	14	6	QA Tester
+16	Test Execution - Product and Search	Execute product and search test cases	1	26-Oct-2026	26-Oct-2026	15	6	QA Tester
+17	Test Execution - Cart and Checkout	Execute cart and checkout test cases	1.5	27-Oct-2026	28-Oct-2026	16	9	QA Tester
+18	Defect Reporting	Document defects with reproduction steps and evidence	0.5	29-Oct-2026	29-Oct-2026	17	3	QA Tester
+19	Test Execution Review	Review execution results and blocked test cases	0.5	29-Oct-2026	29-Oct-2026	18	3	QA Tester
+20	Defect Retesting	Retest reported defects if fixes are available	0.5	1-Nov-2026	1-Nov-2026	18	3	QA Tester
+21	Regression Testing	Retest affected features after relevant fixes	1	2-Nov-2026	2-Nov-2026	20	6	QA Tester
+22	Evaluate Exit Criteria	Check test coverage, results, and unresolved defects	0.5	3-Nov-2026	3-Nov-2026	21	3	QA Tester
+23	Test Summary Report	Summarize execution results and outstanding defects	0.5	3-Nov-2026	3-Nov-2026	22	3	QA Tester
+24	Test Closure	Organize final documents and close testing activities	0.5	3-Nov-2026	3-Nov-2026	23	3	QA Tester
